@@ -7,7 +7,7 @@ RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN curl -L http://cpanmin.us | perl - App::cpm
-RUN cpm Date::Manip Net::LDAP
+RUN cpm install Date::Manip Net::LDAP
 
 ADD http://tools.ltb-project.org/attachments/download/813/ltb-project-nagios-plugins-0.6.tar.gz /
 RUN tar xvf /ltb-project-nagios-plugins-0.6.tar.gz -C /
