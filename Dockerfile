@@ -2,7 +2,7 @@ FROM perl:5.22.0-threaded
 
 MAINTAINER Leon Kyneur <leon@dexterous.org>
 
-RUN apt-get update -y && apt-get install -y monitoring-plugins-common
+RUN apt-get update -y && apt-get install -y monitoring-plugins-common lmdb-utils
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
